@@ -1,11 +1,23 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TableController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-Route::post('/register', [AuthController::class, 'handleRegister'])->name('handleRegister');
-Route::get('/welcome', [AuthController::class, 'showWelcome'])->name('welcome');
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', [HomeController::class, 'index']);
+Route::get('register', [AuthController::class, 'register']);
+Route::post('welkom', [AuthController::class, 'welkom']);
+Route::get("table", [TableController::class, "get_table"]);
+Route::get("data-table", [TableController::class, "get_dataTable"]);
