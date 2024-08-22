@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('table_peran', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('film_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('cast_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('cast_id')->constrained();
+            $table->foreignId('film_id')->constrained();
             $table->string('nama');
             $table->timestamps();
         });
