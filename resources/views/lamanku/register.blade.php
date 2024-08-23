@@ -13,7 +13,6 @@
 	<input type="radio"> Male <br>
 	<input type="radio"> Famale <br>
 	<input type="radio"> Other <br><br>
-
 	<label>Nationality :</label><br>
 	<select Name="Name_of_list_box" Size="Number_of_options">  
 		<option> Indonesia </option>  
